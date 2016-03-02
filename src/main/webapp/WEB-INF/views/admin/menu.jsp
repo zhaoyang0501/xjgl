@@ -7,7 +7,7 @@
 		</div>
 		<div class="admin-meta">
 			<ul>
-				<li class="admin-username" style="margin-top: 10px;">欢迎你 ${sessionScope.adminuser.name}，${sessionScope.adminuser.club.name}</li>
+				<li class="admin-username" style="margin-top: 10px;">欢迎你 ${sessionScope.adminuser.name}</li>
 				<li><a href="${pageContext.request.contextPath}/admin/loginout">
 				<i class="icon-lock"></i> 退出</a></li>
 			</ul>
@@ -27,6 +27,12 @@
 			<div class="tab-pane active dailyreport" id="dailyreport">
 				<ul id="nav" class="accordion-nav" >
 				<c:if test="${sessionScope.adminuser.username=='admin'}">
+				
+						<li><a href="${pageContext.request.contextPath}/admin/user/create"><i class="icon-pencil"></i>学籍卡录入</a></li>
+						<li><a href="${pageContext.request.contextPath}/admin/user/index"><i class="icon-pencil"></i>学籍管理</a></li>
+					    
+					    <li><a href="${pageContext.request.contextPath}/admin/category/index"><i class="icon-pencil"></i>专业管理</a></li>
+				
 					<li><a href="${pageContext.request.contextPath}/admin/club/create"><i class="icon-pencil"></i>社团登记</a></li>
 					<li><a href="${pageContext.request.contextPath}/admin/dept/create"><i class="icon-pencil"></i>社团部门登记</a></li>
 					<li><a href="${pageContext.request.contextPath}/admin/work/create"><i class="icon-pencil"></i>社团活动登记</a></li>

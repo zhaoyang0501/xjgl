@@ -39,10 +39,10 @@
 					<div class="span12">
 						<div class="content-widgets light-gray">
 							<div class="widget-head  bondi-blue" >
-								<h3>会员登记</h3>
+								<h3>学籍管理</h3>
 							</div>
 							<div class="box well form-inline">
-								<span>会员名称：</span>
+								<span>学生姓名：</span>
 								<input type="text" id="_name" >
 								<a onclick="$.adminUser.initSearchDataTable()"
 									class="btn btn-info" data-loading-text="正在加载..."><i class="icon-search"></i>查询</a>
