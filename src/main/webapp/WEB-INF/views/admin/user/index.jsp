@@ -48,23 +48,21 @@
 									class="btn btn-info" data-loading-text="正在加载..."><i class="icon-search"></i>查询</a>
 							</div>
 							<div class="widget-container">
-								
-									<a class="btn btn-success" style="float: right; margin: 5px;" onclick="$.adminUser.showUserAddModal()"><i class="icon-plus"></i>会员登记</a>
 								<table class="responsive table table-striped table-bordered"
 									id="dt_table_view">
 									<thead>
 										<tr>
 											<th >ID</th>
-											<th >用户名</th>
-											<th >密码</th>
 											<th >姓名</th>
-											<th >地址</th>
-											<th >电话</th>
-											<th >邮件</th>
-											<th >学校</th>
-											<th >班级</th>
-											<th >所属社团</th>
-											<th >职务</th>
+											<th >学号</th>
+											<th >密码</th>
+											<th >性别</th>
+											<th >名族</th>
+											<th >出生日期</th>
+											<th >婚否</th>
+											<th >籍贯</th>
+											<th >疾病历史</th>
+											<th >邮政编码</th>
 											<th >加入日期</th>
 											<th >操作</th>
 										</tr>

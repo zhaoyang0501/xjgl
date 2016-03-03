@@ -51,25 +51,25 @@ jQuery.adminUser = {
 					"aoColumns" : [ {
 						"mDataProp" : "id"
 					}, {
+						"mDataProp" : "name"
+					} ,{
 						"mDataProp" : "username"
 					}, {
 						"mDataProp" : "password"
 					}, {
-						"mDataProp" : "name"
+						"mDataProp" : "c2"
 					}, {
-						"mDataProp" : "address"
+						"mDataProp" : "c3"
 					}, {
-						"mDataProp" : "tel"
+						"mDataProp" : "c4"
 					}, {
-						"mDataProp" : "email"
+						"mDataProp" : "c5"
 					},{
-						"mDataProp" : "school"
+						"mDataProp" : "c6"
 					},{
-						"mDataProp" : "grade"
+						"mDataProp" : "c7"
 					},{
-						"mDataProp" : "club.name"
-					},{
-						"mDataProp" : "job"
+						"mDataProp" : "c8"
 					}, {
 						"mDataProp" : "createDate"
 					},{
@@ -79,7 +79,7 @@ jQuery.adminUser = {
 						{
 							'aTargets' : [12],
 							'fnRender' : function(oObj, sVal) {
-								return"  <button class=\"btn2 btn-info\" onclick=\"$.adminUser.deleteUser("+oObj.aData.id+")\"><i class=\"icon-trash\"></i> 删除</button>";
+								return"  <a class=\"btn2 btn-info\" href='user/update/"+oObj.aData.id+"'><i class=\"icon-edit\"></i> 修改</a>   <button class=\"btn2 btn-info\" onclick=\"$.adminUser.deleteUser("+oObj.aData.id+")\"><i class=\"icon-trash\"></i> 删除</button>";
 							}
 						},
 					 {

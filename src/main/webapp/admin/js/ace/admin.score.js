@@ -1,4 +1,4 @@
-jQuery.adminScore = {
+jQuery.score = {
 		scoreDataTable:null,
 		initSearchDataTable : function() {
 			if (this.scoreDataTable == null) {
@@ -53,13 +53,13 @@ jQuery.adminScore = {
 					}, {
 						"mDataProp" : "user.name"
 					}, {
-						"mDataProp" : "year"
+						"mDataProp" : "user.username"
 					},{
-						"mDataProp" : "lesson.name"
-					}, {
-						"mDataProp" : "total"
+						"mDataProp" : "course.name"
 					}, {
 						"mDataProp" : "score"
+					}, {
+						"mDataProp" : "createDate"
 					},{
 						"mDataProp" : ""
 					}],
@@ -71,15 +71,9 @@ jQuery.adminScore = {
 							}
 						},
 						{
-							'aTargets' : [5],
-							'fnRender' : function(oObj, sVal) {
-								 return "<span class='label label-success'>"+sVal+"</span>"
-							}
-						},
-						{
 							'aTargets' : [6],
 							'fnRender' : function(oObj, sVal) {
-								return"  <button class=\"btn2 btn-info\" onclick=\"$.adminScore.deleteScore("+oObj.aData.id+")\"><i class=\"icon-trash\"></i> 删除</button>" ;
+								return"  <button class=\"btn2 btn-info\" onclick=\"$.score.deleteScore("+oObj.aData.id+")\"><i class=\"icon-trash\"></i> 删除</button>" ;
 							}
 						},
 					 {
@@ -106,7 +100,7 @@ jQuery.adminScore = {
 	        			success : function(json) {
 	        				if(json.state=='success'){
 	        					noty({"text":""+ json.msg +"","layout":"top","type":"success","timeout":"2000"});
-	        					$.adminScore.initSearchDataTable();
+	        					$.score.initSearchDataTable();
 	        				}else{
 	        					noty({"text":""+ json.resultMap.msg +"","layout":"top","type":"warning"});
 	        				}
@@ -149,7 +143,7 @@ jQuery.adminScore = {
     				if(json.state=='success'){
     					$("#_modal").modal('hide');
     					noty({"text":""+ json.msg +"","layout":"top","type":"success","timeout":"2000"});
-    					$.adminScore.initSearchDataTable();
+    					$.score.initSearchDataTable();
     				}else{
     					noty({"text":""+ json.msg +"","layout":"top","type":"warning"});
     				}

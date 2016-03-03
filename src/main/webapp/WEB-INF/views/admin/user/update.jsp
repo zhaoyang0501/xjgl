@@ -45,15 +45,16 @@
 					<div class="span12">
 						<div class="content-widgets ">
 						<div class="widget-head  bondi-blue">
-							<h3>填写学生学籍</h3>
+							<h3>修改学籍</h3>
 						</div>
 						<div class="widget-container">
-							<form id='dayoffform' class="form-horizontal " method="post" action="user/save">
+							<form id='dayoffform' class="form-horizontal " method="post" action="user/doupdate">
+								<input type="hidden" name="id" value="${user.id }"/>
 								<table id='' class=" responsive table table-striped table_bordered_black table-condensed formtable" >
 									<tr>
 										<td colspan="8">
 											<div class="table_title">
-												 <h3>清华大学学生学籍卡</h3> 
+												 <h3>${user.name }  学籍卡</h3> 
 											</div>
 										</td>
 									</tr>

@@ -30,6 +30,7 @@
 	
 	<script type="text/javascript">
 		$(function() {
+			$("input").attr("readonly","readonly");
 		});
 	</script>
 </head>
@@ -227,9 +228,6 @@
 										</td>
 									</tr>
 								</table>
-								<div >
-									<button type="submit" class="btn btn-primary" >提交</button>
-								</div>
 							</form>
 						</div>
 					</div>
