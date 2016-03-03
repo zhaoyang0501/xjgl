@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.pzy.entity.Score;
+import com.pzy.entity.User;
 import com.pzy.service.CourseService;
 import com.pzy.service.ScoreService;
 import com.pzy.service.UserService;
@@ -36,11 +37,11 @@ public class ScoreController {
 	
 	@RequestMapping("show")
 	public String show(HttpSession httpSession,Model model) {
-		model.addAttribute("scores",scoreService.findAll());
+		model.addAttribute("scores",scoreService.findAll(1,20,(User)httpSession.getAttribute("adminuser")).getContent());
 		return "admin/score/show";
 	}
 	@RequestMapping("index")
-	public String index(Model model) {
+	public String index(Model model,HttpSession httpSession) {
 		model.addAttribute("users",userService.findAll());
 		model.addAttribute("courses",courseService.findAll());
       		return "admin/score/index";

@@ -17,6 +17,7 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 import com.pzy.entity.Score;
+import com.pzy.entity.User;
 import com.pzy.repository.ScoreRepository;
 /***
  * 
@@ -51,13 +52,13 @@ public class ScoreService {
          return result;
      	}
      
-     public Page<Score> findAll(final int pageNumber, final int pageSize,final Integer type ){
+     public Page<Score> findAll(final int pageNumber, final int pageSize,final User user ){
          PageRequest pageRequest = new PageRequest(pageNumber - 1, pageSize, new Sort(Direction.DESC, "id"));
          Specification<Score> spec = new Specification<Score>() {
               public Predicate toPredicate(Root<Score> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
               Predicate predicate = cb.conjunction();
-              if (type != null) {
-                  predicate.getExpressions().add(cb.equal(root.get("type").as(Integer.class),type));
+              if (user != null) {
+            	  predicate.getExpressions().add(cb.equal(root.get("user").as(User.class),user));
                }
               return predicate;
               }

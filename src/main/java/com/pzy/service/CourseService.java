@@ -17,6 +17,7 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 import com.pzy.entity.Course;
+import com.pzy.entity.User;
 import com.pzy.repository.CourseRepository;
 /***
  * 
@@ -51,13 +52,13 @@ public class CourseService {
          return result;
      	}
      
-     public Page<Course> findAll(final int pageNumber, final int pageSize,final Integer type ){
+     public Page<Course> findAll(final int pageNumber, final int pageSize,final User user ){
          PageRequest pageRequest = new PageRequest(pageNumber - 1, pageSize, new Sort(Direction.DESC, "id"));
          Specification<Course> spec = new Specification<Course>() {
               public Predicate toPredicate(Root<Course> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
               Predicate predicate = cb.conjunction();
-              if (type != null) {
-                  predicate.getExpressions().add(cb.equal(root.get("type").as(Integer.class),type));
+              if (user != null) {
+                  predicate.getExpressions().add(cb.equal(root.get("user").as(User.class),user));
                }
               return predicate;
               }

@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.pzy.entity.User;
-import com.pzy.service.ClubService;
 import com.pzy.service.UserService;
 /***
  * @author panchaoyang
@@ -28,8 +27,6 @@ import com.pzy.service.UserService;
 public class UserController {
 	@Autowired
 	private UserService userService;
-	@Autowired
-	private ClubService clubService;
 	
 	@RequestMapping("create")
 	public String create() {
@@ -102,7 +99,7 @@ public class UserController {
 		try {
 			userService.delete(id);
 			map.put("state", "success");
-			map.put("msg", "鍒犻櫎鎴愬姛");
+			map.put("msg", "删除成功");
 		} catch (Exception e) {
 			map.put("state", "error");
 			map.put("msg", "鍒犻櫎澶辫触锛屽閿害鏉�");
