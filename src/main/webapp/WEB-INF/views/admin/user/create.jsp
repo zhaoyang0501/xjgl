@@ -53,7 +53,7 @@
 									<tr>
 										<td colspan="8">
 											<div class="table_title">
-												 <h3>清华大学学生学籍卡</h3> 
+												 <h3>广东工业大学学生学籍卡</h3> 
 											</div>
 										</td>
 									</tr>

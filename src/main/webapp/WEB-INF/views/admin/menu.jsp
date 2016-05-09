@@ -46,6 +46,7 @@
 				<c:if test="${sessionScope.adminuser.username!='admin'}">
 						<li><a href="${pageContext.request.contextPath}/admin/user/show"><i class="icon-pencil"></i>我的学籍资料</a></li>
 						<li><a href="${pageContext.request.contextPath}/admin/score/show"><i class="icon-pencil"></i>我的成绩</a></li>
+						<li><a href="${pageContext.request.contextPath}/admin/course/viewindex"><i class="icon-pencil"></i>课程查询</a></li>
 				</c:if>
 				</ul>
 			</div>

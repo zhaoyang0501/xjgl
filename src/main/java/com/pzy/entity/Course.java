@@ -30,6 +30,31 @@ public class Course {
 	
 	private String teacher;
 	
+	private String address;
+	
+	private String courseDate;
+	
+	private String checkDate;
+	
+	
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getCourseDate() {
+		return courseDate;
+	}
+	public void setCourseDate(String courseDate) {
+		this.courseDate = courseDate;
+	}
+	public String getCheckDate() {
+		return checkDate;
+	}
+	public void setCheckDate(String checkDate) {
+		this.checkDate = checkDate;
+	}
 	private String score;
 	private String addr;
 	

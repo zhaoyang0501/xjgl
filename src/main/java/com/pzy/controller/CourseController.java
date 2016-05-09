@@ -30,7 +30,11 @@ public class CourseController {
 		
       		return "admin/course/index";
 	}
-	
+	@RequestMapping("viewindex")
+	public String viewindex(Model model) {
+		
+      		return "admin/viewcourse/index";
+	}
 	@RequestMapping(value = "/list", method = RequestMethod.POST)
 	@ResponseBody
 	public Map<String, Object> list(

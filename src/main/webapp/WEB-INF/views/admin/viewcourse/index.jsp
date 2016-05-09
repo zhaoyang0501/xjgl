@@ -4,7 +4,7 @@
 <html lang="ch">
 <%@ include file="../common/meta.jsp"%>
 <head>
-<script type="text/javascript" src="${pageContext.request.contextPath}/admin/js/ace/admin.course.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/admin/js/ace/admin.viewcourse.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/admin/js/falgun/bootbox.js"></script>
 <script src="${pageContext.request.contextPath}/admin/js/falgun/bootstrap-datetimepicker.min.js"></script>
 <script src="${pageContext.request.contextPath}/admin/js/falgun/bootstrap-datetimepicker.zh-CN.js"></script>
@@ -28,7 +28,7 @@
 					<div class="span12">
 						<div class="content-widgets ">
 							<div class="widget-head  bondi-blue" >
-								<h3>课程管理</h3>
+								<h3>课程查询</h3>
 							</div>
 							<div class="box well form-inline">
 								
@@ -37,8 +37,6 @@
 									class="btn btn-info" data-loading-text="正在加载..."><i class="icon-search"></i>查询</a>
 							</div>
 							<div class="row-fluid ">
-								
-									<a class="btn btn-success" style="float: right; margin: 5px;" onclick="$.course.showUserAddModal()"><i class="icon-plus"></i>创建</a>
 								<table class="responsive table table-striped table-bordered"
 									id="dt_table_view">
 									<thead>
@@ -51,8 +49,6 @@
 											<th >上课时间</th>
 											<th >上课地点</th>
 											<th >考试时间</th>
-											<th >创建时间</th>
-											<th >操作</th>
 										</tr>
 									</thead>
 									<tbody>

@@ -64,18 +64,8 @@ jQuery.course = {
 						"mDataProp" : "address"
 					},{
 						"mDataProp" : "checkDate"
-					},{
-						"mDataProp" : "createDate"
-					},{
-						"mDataProp" : ""
 					}],
 					"aoColumnDefs" : [
-						{
-							'aTargets' : [9],
-							'fnRender' : function(oObj, sVal) {
-								return" <button class=\"btn2 btn-info\" onclick=\"$.course.showEdit("+oObj.aData.id+")\"><i class=\"icon-edit\"></i> 修改</button>  <button class=\"btn2 btn-info\" onclick=\"$.course.deleteUser("+oObj.aData.id+")\"><i class=\"icon-trash\"></i> 删除</button>";
-							}
-						},
 					 {
 						'aTargets' : [ '_all' ],
 						'bSortable' : false,
